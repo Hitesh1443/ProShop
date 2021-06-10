@@ -5,9 +5,11 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon backend/app.js",
+    "server": "nodemon backend/app",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client"
+    "dev": "concurrently \"npm run server\" \"npm run client",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
   },
   "author": "Hitesh Tiwari",
   "license": "ISC",
@@ -16,6 +18,8 @@
     "concurrently": "^6.2.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.12"
   }
 }

@@ -7,7 +7,7 @@ const reviewSchema = mongoose.Schema(
     comment: { type: String, required: true },
   },
   {
-    timeStamp: true,
+    timestamps: true,
   }
 );
 
@@ -30,4 +30,4 @@ const productSchema = mongoose.Schema(
 
 const Product = mongoose.model("Product", productSchema);
 
-export default User;
+export default Product;
